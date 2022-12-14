@@ -1,0 +1,54 @@
+<html>
+
+<header>
+<center> <h1> Enesca Library </h1> </center>
+</header>
+
+<%- include('partials/nav') %>
+
+<style>
+.bodym {
+  margin: 25px 50px 75px 100px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 75px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden; 
+  padding-top: 20px;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+
+</style>
+<center>
+
+<div class="data-form">
+    <form action="/addnewbook/save" method="POST">
+        <h2>Add a new book</h2>
+        <label >Book Name</label>
+        <input type="text" name="name" placeholder="" required>
+
+        <label>Author</label>
+        <input type="text" name="author" placeholder="" required>
+        
+        <button type="submit">Add book</button>
+        <a href="/admin"> Cancel </a>
+    </form>
+</div>
+
+
+<center>
+</html>

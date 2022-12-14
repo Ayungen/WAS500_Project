@@ -1,0 +1,54 @@
+<html>
+
+<header>
+<center> <h1> Enesca Library </h1> </center>
+</header>
+
+<%- include('partials/nav') %>
+
+<style>
+.bodym {
+  margin: 25px 50px 75px 100px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 75px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden; 
+  padding-top: 20px;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+
+</style>
+<center>
+
+<div class="data-form">
+<form action="/edit/save" method="POST">
+        <h2>Edit a Record</h2>
+       
+        <label>ID</label>
+        <input type="text" name="id" value="<%= books._id %>" readonly required><br><br>
+        
+        <label>Name</label>
+        <input type="text" name="name" placeholder="<%= books.name %>" required><br><br>
+
+        <label>Author</label>
+        <input type="text" name="author" placeholder="<%= books.author %>" required><br><br>
+		<button type="submit">Save Changes</button>
+    </form>
+</div>
+<center>
+</html>
